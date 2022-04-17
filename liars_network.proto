@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package liars_network;
+
+option go_package= "./liars_network;liars_network";
+
+message LieRequest {
+    // if true, then this request is sent from client; or else is from another agent
+    bool from_client = 1;
+}
+
+message LieResponse {
+    int32 agent_value = 1;
+}
+
+service LieService {
+    rpc LieQuery(LieRequest) returns (LieResponse) {}
+}
