@@ -5,12 +5,14 @@ package liars_network;
 option go_package= "./liars_network;liars_network";
 
 message LieRequest {
-    // if true, then this request is sent from client; or else is from another agent
-    bool from_client = 1;
+    // if true, then this request is sent from playexpert command.
+    bool expert_mode = 1;
+    repeated string other_agent_ids = 2;
 }
 
 message LieResponse {
     int32 agent_value = 1;
+    repeated int32 collected_agent_values = 2;
 }
 
 service LieService {

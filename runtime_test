@@ -1,0 +1,4 @@
+extend --value 2 --max-value 10 --num-agents 20 --liar-ratio 0.3
+playexpert --num-agents 3 --liar-ratio 0.3
+extend --value 1 --max-value 2 --num-agents 5 --liar-ratio 0.5
+playexpert --num-agents 1 --liar-ratio 0.5
